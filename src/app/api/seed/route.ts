@@ -1,10 +1,11 @@
-import prisma from "@/app/lib/prisma";
+import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const todo = await prisma.todo.create({
     data: {
       description: "Seeded Todo",
+      completed: false,
     },
   });
 
