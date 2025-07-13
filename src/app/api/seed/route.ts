@@ -5,7 +5,7 @@ export async function GET(request: Request) {
   const todo = await prisma.todo.create({
     data: {
       description: "Seeded Todo",
-      completed: false,
+      complete: false,
     },
   });
 
