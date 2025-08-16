@@ -1,5 +1,21 @@
 import { NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
 
-export async function GET(request: Request, segmetns: any) {
-  return NextResponse.json({ segmetns });
+interface Segments {
+  params: {
+    id: string;
+  };
+}
+export async function GET(request: Request, { params }: Segments) {
+  const { id } = params;
+
+  const todo = await prisma.todo.findFirst({ where: { id } });
+  if (!todo) {
+    return NextResponse.json(
+      { message: `Todo con id: ${id} no encontrado` },
+      { status: 404 }
+    );
+  }
+
+  return NextResponse.json(todo);
 }
