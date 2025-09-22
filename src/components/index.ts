@@ -1,4 +1,4 @@
 export * from "./Sidebar";
-export { SideBarItem } from "./SideBarItem";
+export { SidebarItem } from "./SidebarItem";
 export { TopMenu } from "./TopMenu";
 export { WidgetItem } from "./WidgetItem";
