@@ -3,6 +3,29 @@ import Link from "next/link";
 import React from "react";
 import { CiLogout } from "react-icons/ci";
 import { SidebarItem } from "./SidebarItem";
+import {
+  IoCalendarOutline,
+  IoCheckboxOutline,
+  IoListOutline,
+} from "react-icons/io5";
+
+const menuItems = [
+  {
+    icon: <IoCalendarOutline size={20} />,
+    title: "Dashboard",
+    path: "/dashboard",
+  },
+  {
+    icon: <IoCheckboxOutline size={20} />,
+    title: "Rest Todos",
+    path: "/dashboard/rest-todos",
+  },
+  {
+    icon: <IoListOutline size={20} />,
+    title: "Server Todos",
+    path: "/dashboard/server-todos",
+  },
+];
 
 const Sidebar = () => {
   return (
@@ -39,8 +62,9 @@ const Sidebar = () => {
         <ul className="space-y-2 tracking-wide mt-8">
           {/* TODO: src/components <SidebarItem /> */}
           {/* Active className: text-white bg-gradient-to-r from-sky-600 to-cyan-400 */}
-          <SidebarItem />
-          <SidebarItem />
+          {menuItems.map((item) => (
+            <SidebarItem key={item.title} {...item} />
+          ))}
         </ul>
       </div>
 
