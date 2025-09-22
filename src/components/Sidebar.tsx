@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { CiBookmarkCheck, CiLogout } from "react-icons/ci";
-import { SideBarItem } from "./SideBarItem";
+import { CiLogout } from "react-icons/ci";
+import { SidebarItem } from "./SidebarItem";
 
 const Sidebar = () => {
   return (
@@ -39,8 +39,8 @@ const Sidebar = () => {
         <ul className="space-y-2 tracking-wide mt-8">
           {/* TODO: src/components <SidebarItem /> */}
           {/* Active className: text-white bg-gradient-to-r from-sky-600 to-cyan-400 */}
-          <SideBarItem />
-          <SideBarItem />
+          <SidebarItem />
+          <SidebarItem />
         </ul>
       </div>
 

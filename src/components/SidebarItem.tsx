@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { CiBookmarkCheck } from "react-icons/ci";
 
-export const SideBarItem = () => {
+export const SidebarItem = () => {
   return (
     <li>
       <Link
