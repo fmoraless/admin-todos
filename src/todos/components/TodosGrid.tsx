@@ -1,5 +1,5 @@
 "use client";
-import { Todo } from "@/generated/prisma";
+import { Todo } from "@/generated/prisma/client";
 import React from "react";
 import { TodoItem } from "./TodoItem";
 

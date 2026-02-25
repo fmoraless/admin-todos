@@ -1,5 +1,5 @@
 "use server";
-import { Todo } from "@/generated/prisma";
+import { Todo } from "@/generated/prisma/client";
 import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 

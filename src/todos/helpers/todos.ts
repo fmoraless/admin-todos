@@ -1,4 +1,4 @@
-import { Todo } from "@/generated/prisma";
+import { Todo } from "@/generated/prisma/client";
 
 const sleep = (seconds: number = 0): Promise<boolean> => {
   return new Promise((resolve) => {
