@@ -24,6 +24,18 @@ export async function GET(request: Request) {
         description: "Piedra del espacio",
         complete: true,
       },
+      {
+        description: "Renovar el contrato de arrendamiento",
+        complete: false,
+      },
+      {
+        description: "Comprar un nuevo auto",
+        complete: false,
+      },
+      {
+        description: "Llevar el auto al taller",
+        complete: false,
+      },
     ],
   });
 
