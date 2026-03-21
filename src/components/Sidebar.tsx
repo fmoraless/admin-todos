@@ -7,6 +7,7 @@ import {
   IoCalendarOutline,
   IoCheckboxOutline,
   IoListOutline,
+  IoPersonOutline,
 } from "react-icons/io5";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
@@ -27,6 +28,12 @@ const menuItems = [
     title: "Server Todos",
     path: "/dashboard/server-todos",
   },
+
+  {
+    icon: <IoPersonOutline size={20} />,
+    title: "Profile",
+    path: "/dashboard/profile",
+  },
 ];
 
 const Sidebar = async () => {
@@ -41,7 +48,7 @@ const Sidebar = async () => {
       <div>
         <div className="-mx-6 px-6 py-4">
           {/* TODO: Next/Link hacia dashboard */}
-          <Link href="#" title="home">
+          <Link href="/dashboard" title="home">
             <Image
               src="/images/todos-logo-gemini.png"
               className="w-32"

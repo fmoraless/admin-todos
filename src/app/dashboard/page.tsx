@@ -7,9 +7,6 @@ import { redirect } from "next/navigation";
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
 
-  const userName = session?.user?.name || "Desconocido";
-  const avatarUrl = session?.user?.image || "/default-avatar.png";
-
   if (!session) {
     redirect("/api/auth/signin");
   }
