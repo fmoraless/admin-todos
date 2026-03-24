@@ -18,6 +18,8 @@ export default async function DashboardPage() {
           <span className="text-sm text-gray-500">{session.user?.name}</span>
           <span className="text-sm text-gray-500">{session.user?.image}</span>
           <span className="text-sm text-gray-500">{session.user?.email}</span>
+
+          <div>{JSON.stringify(session, null, 2)}</div>
         </div>
       </WidgetItem>
     </div>
